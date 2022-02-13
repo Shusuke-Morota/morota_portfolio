@@ -1,0 +1,65 @@
+/*===================
+        base
+===================*/
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: HiraKakuPro-W3;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 176px;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+textarea {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/*===================
+        global
+===================*/
+
+/*================================
+	header
+=================================*/
+
+header {
+  width: 100%;
+  background-color: #F0E5CF;
+  z-index: 9999;
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  min-height: 100px;
+  margin: 0 auto;
+}
+
+header .logo {
+  width: 134px;
+  height: 67px;
+}
+
+header .navigation .list {
+  display: flex;
+  column-gap: 45px;
+}
