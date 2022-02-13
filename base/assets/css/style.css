@@ -35,11 +35,17 @@ textarea {
         global
 ===================*/
 
+section {
+  max-width: 1024px;
+}
+
 /*================================
 	header
 =================================*/
 
 header {
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: #F0E5CF;
   z-index: 9999;
@@ -62,4 +68,27 @@ header .logo {
 header .navigation .list {
   display: flex;
   column-gap: 45px;
+}
+
+/*================================
+	first view
+=================================*/
+
+.firstView {
+  margin: 0 auto;
+  max-height: 700px;
+}
+
+.firstView .container {
+  margin-top: 85px;
+}
+
+.firstView .text {
+  text-align: center;
+  font-size: 48px;
+}
+
+.firstView .heroWrapper {
+  display: flex;
+  margin-top: 44px;
 }
