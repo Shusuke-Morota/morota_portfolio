@@ -64,6 +64,7 @@ header {
   top: 0;
   width: 100%;
   background-color: #F0E5CF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   z-index: 9999;
 }
 
