@@ -4,7 +4,6 @@
 
 body {
   min-height: 100vh;
-  /* padding-bottom: 176px; */
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
@@ -40,8 +39,19 @@ section {
 }
 
 .container {
-  width: 1024px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 1023px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    max-width: 96%;
+  }
 }
 
 .contentsWrapper {
@@ -136,7 +146,6 @@ header .navigation .item {
 .about .icon {
   width: 300px;
   height: 300px;
-  margin-left: 100px;
 }
 
 .about .authorImage {
@@ -153,13 +162,14 @@ header .navigation .item {
 }
 
 .works .cards {
-  display: flex;
-  justify-content: center;
   column-gap: 30px;
 }
 
-.works .card {
-  width: 300px;
+.works .thumbnail {
+  background-image: url(../img/Disney2_image.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
 }
 
 .works .detail {
@@ -187,7 +197,7 @@ header .navigation .item {
 }
 
 /*================================
-	skills section
+	SKILLS section
 =================================*/
 
 .skills {
@@ -198,21 +208,19 @@ header .navigation .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 35px;
 }
 
 .skills .tab {
   padding: 15px;
-  font-size: 36px;
 }
 
-.skilld .tab.is-active {
-  border: 1px solid #333;
+.skills .tab.is-active {
+  border-bottom: 1px solid #333;
 }
 
 .skills .icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
   margin-top: 100px;
@@ -232,7 +240,7 @@ header .navigation .item {
 }
 
 /*================================
-	skills section
+	CONTACT section
 =================================*/
 
 .contact {
@@ -296,15 +304,84 @@ footer .text {
 ===================*/
 
 /*================================
-	Desk top( 1024px- )
+	Desk top( 〜1024px )
 =================================*/
+
+@media only screen and (min-width: 1024px) {
+  .works .cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  .works .card {
+    max-width: 300px;
+  }
+}
 
 @media only screen and (max-width: 1023px) {
   header .inner {
-    width: 96%;
+    max-width: 96%;
   }
 
-  .container {
-    width: 96%;
+  .works .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about .icon {
+    margin-left: 100px;
+  }
+
+  .skills .tabs {
+    column-gap: 35px;
+  }
+
+  .skills .tab {
+    font-size: 36px;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  header .navigation {
+    display: none;
+  }
+
+  .about .contentsWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .skills .tab {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .contact .pcNone {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 450px) {
+  .skills .icons {
+    gap: 60px 30px;
+  }
+
+  .skills .image {
+    width: 130px;
+    height: 160px;
+  }
+
+  .contact .text {
+    font-size: 36px;
+  }
+
+  .contact .pcNone {
+    display: block;
   }
 }
