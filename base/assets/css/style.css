@@ -17,6 +17,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 a {
@@ -36,7 +37,6 @@ textarea {
 ===================*/
 
 section {
-  margin: 0 auto;
   padding: 85px 0 125px;
 }
 
@@ -113,7 +113,7 @@ header .navigation .item {
   background-color: #F7F6F2;
 }
 
-  .about .contentsWrapper {
+.about .contentsWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +121,10 @@ header .navigation .item {
 
 .about .profile {
   font-size: 16px;
+}
+
+.about .wrapper {
+  line-height: 1.7;
 }
 
 .about .wrapper + .wrapper {
@@ -132,9 +136,9 @@ header .navigation .item {
 }
 
 .about .icon {
-  width: 275px;
-  height: 275px;
-  margin-left: 80px;
+  width: 300px;
+  height: 300px;
+  margin-left: 100px;
 }
 
 .about .authorImage {
@@ -182,4 +186,56 @@ header .navigation .item {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+}
+
+/*================================
+	skills section
+=================================*/
+
+.skills {
+  background-color: #F7F6F2;
+}
+
+.skills .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+}
+
+.skills .tab {
+  padding: 15px;
+  font-size: 36px;
+}
+
+.skilld .tab.is-active {
+  border: 1px solid #333;
+}
+
+.skills .icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+.skills .icon {
+  /* width: 180px;
+  height: 220px; */
+}
+
+.skills .title {
+  text-align: center;
+}
+
+.skills .body {
+  /* width: 180px;
+  height: 220px; */
+  margin-top: 25px;
+}
+
+.skills .image {
+  width: 180px;
+  height: 220px;
 }
