@@ -3,14 +3,13 @@
 ===================*/
 
 body {
+  min-height: 100vh;
+  /* padding-bottom: 176px; */
+  position: relative;
+  box-sizing: border-box;
   background-color: #fff;
   color: #333;
   font-size: 14px;
-  font-family: HiraKakuPro-W3;
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 176px;
-  box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -274,4 +273,21 @@ header .navigation .item {
   padding: 15px 20px;
   border: 1px solid #333;
   font-size: 36px;
+}
+
+/*================================
+	footer
+=================================*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px 0;
+  background-color: #F0E5CF;
+}
+
+footer .text {
+  font-size: 24px;
 }
