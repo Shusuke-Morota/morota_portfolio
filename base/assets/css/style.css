@@ -37,7 +37,7 @@ textarea {
 
 section {
   margin: 0 auto;
-  padding: 85px 0;
+  padding: 85px 0 125px;
 }
 
 .container {
@@ -45,6 +45,10 @@ section {
   max-width: 96%;
   /* レスポンシブ時に↑ */
   margin: 0 auto;
+}
+
+.contentsWrapper {
+  margin-top: 96px;
 }
 
 .heading {
@@ -109,11 +113,10 @@ header .navigation .item {
   background-color: #F7F6F2;
 }
 
-.about .aboutWrapper {
+  .about .contentsWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 96px;
 }
 
 .about .profile {
@@ -122,6 +125,10 @@ header .navigation .item {
 
 .about .wrapper + .wrapper {
   margin-top: 15px;
+}
+
+.about .title {
+  font-weight: 700;
 }
 
 .about .icon {
@@ -133,4 +140,46 @@ header .navigation .item {
 .about .authorImage {
   display: block;
   border-radius: 9999px;
+}
+
+/*================================
+	WORKS section
+=================================*/
+
+.works {
+  background-color: #EDCDBB;
+}
+
+.works .cards {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.works .card {
+  width: 300px;
+}
+
+.works .detail {
+  height: 175px;
+  padding: 20px 15px;
+  background-color: #F7F6F2;
+}
+
+.works .title {
+  word-break: break-all;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.works .body {
+  margin-top: 15px;
+  line-height: 1.5;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
