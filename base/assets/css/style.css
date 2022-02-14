@@ -41,8 +41,6 @@ section {
 
 .container {
   width: 1024px;
-  max-width: 96%;
-  /* レスポンシブ時に↑ */
   margin: 0 auto;
 }
 
@@ -291,4 +289,22 @@ footer {
 
 footer .text {
   font-size: 24px;
+}
+
+/*===================
+      responsive
+===================*/
+
+/*================================
+	Desk top( 1024px- )
+=================================*/
+
+@media only screen and (max-width: 1023px) {
+  header .inner {
+    width: 96%;
+  }
+
+  .container {
+    width: 96%;
+  }
 }
