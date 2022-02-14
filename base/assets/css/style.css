@@ -36,7 +36,20 @@ textarea {
 ===================*/
 
 section {
-  max-width: 1024px;
+  margin: 0 auto;
+  padding: 85px 0;
+}
+
+.container {
+  width: 1024px;
+  max-width: 96%;
+  /* レスポンシブ時に↑ */
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 48px;
 }
 
 /*================================
@@ -70,18 +83,13 @@ header .navigation .list {
   column-gap: 45px;
 }
 
+header .navigation .item {
+  font-size: 20px;
+}
+
 /*================================
 	first view
 =================================*/
-
-.firstView {
-  margin: 0 auto;
-  max-height: 700px;
-}
-
-.firstView .container {
-  margin-top: 85px;
-}
 
 .firstView .text {
   text-align: center;
@@ -91,4 +99,38 @@ header .navigation .list {
 .firstView .heroWrapper {
   display: flex;
   margin-top: 44px;
+}
+
+/*================================
+	ABOUT section
+=================================*/
+
+.about {
+  background-color: #F7F6F2;
+}
+
+.about .aboutWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+}
+
+.about .profile {
+  font-size: 16px;
+}
+
+.about .wrapper + .wrapper {
+  margin-top: 15px;
+}
+
+.about .icon {
+  width: 275px;
+  height: 275px;
+  margin-left: 80px;
+}
+
+.about .authorImage {
+  display: block;
+  border-radius: 9999px;
 }
