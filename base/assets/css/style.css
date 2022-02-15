@@ -122,16 +122,15 @@ header .navigation .list {
   align-items: center;
 }
 
-.about .profile {
+.about .wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   font-size: 16px;
 }
 
-.about .wrapper {
+.about .profile {
   line-height: 1.7;
-}
-
-.about .wrapper + .wrapper {
-  margin-top: 15px;
 }
 
 .about .title {
@@ -435,9 +434,6 @@ footer .text {
 }
 
 @media not all and (min-width: 768px) {
-  header .navigation {
-    display: none;
-  }
 
   .about .contentsWrapper {
     display: flex;
