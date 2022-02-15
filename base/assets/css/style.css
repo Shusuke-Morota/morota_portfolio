@@ -91,19 +91,14 @@ header .logo {
 }
 
 header .navigation .list {
-  display: flex;
   column-gap: 45px;
-}
-
-header .navigation .item {
-  font-size: 20px;
 }
 
 /*================================
 	first view
 =================================*/
 
-.firstView .text {
+.firstView .message {
   text-align: center;
   font-size: 48px;
 }
@@ -308,6 +303,19 @@ footer .text {
 =================================*/
 
 @media only screen and (min-width: 1024px) {
+  .drawerToggle {
+    display: none;
+  }
+
+  header .navigation .list {
+    display: flex;
+    column-gap: 45px;
+  }
+
+  header .navigation .item {
+    font-size: 20px;
+  }
+
   .works .cards {
     display: flex;
     justify-content: center;
@@ -319,6 +327,88 @@ footer .text {
 }
 
 @media only screen and (max-width: 1023px) {
+  body.active {
+    overflow: hidden;
+  }
+
+  header .drawerToggle {
+    position: fixed;
+    top: 16px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    z-index: 9999;
+  }
+
+  header .drawerToggle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    background-color: #333;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+
+  header .drawerToggle span:first-child {
+    transform: translate(-50%, -16px);
+  }
+
+  header .drawerToggle span:last-child {
+    transform: translate(-50%, 15px);
+  }
+
+  header .drawerToggle.active span:first-child {
+    transform: rotate(45deg) translate(-50%, 0);
+    transform-origin: 0% 50%;
+  }
+
+  header .drawerToggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .drawerToggle.active span:last-child {
+    transform: rotate(-45deg) translate(-50%, 0);
+    transform-origin: 0% 50%;
+  }
+
+/*================================
+	hamburger menu navigation
+=================================*/
+
+  header .navigation {
+    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+    transition: right 0.5s;
+  }
+
+  header .navigation.active {
+    right: 0;
+  }
+
+  header .navigation .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  header .navigation .item {
+    font-size: 30px;
+  }
+
   header .inner {
     max-width: 96%;
   }
