@@ -17,12 +17,12 @@ $(function () {
 
   function fadeUpAnimation() {
     const $fadeUpTrigger = (".fadeUpTrigger")
-    $($fadeUpTrigger).each(function() { //fadeUpTriggerというクラス名が
-      const $elementPosition = $(this).offset().top-50;//要素より、50px上の
+    $($fadeUpTrigger).each(function() {
+      const $elementPosition = $(this).offset().top-50;
       const $scroll = $(window).scrollTop();
       const $sectionHeight = $(window).height();
       if ($scroll >= $elementPosition - $sectionHeight) {
-      $(this).addClass("fadeUp");// 画面内に入ったらfadeUpというクラス名を追記
+      $(this).addClass("fadeUp");
       }
     });
   }
