@@ -3,7 +3,6 @@
 ===================*/
 
 body {
-  min-height: 100vh;
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
@@ -282,12 +281,16 @@ header .navigation .list {
   border-bottom: 1px solid #333;
 }
 
-.skills .icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 60px;
+.skills .iconArea {
   margin-top: 100px;
+}
+
+.skills .icon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 180px);
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .skills .title {
@@ -295,12 +298,7 @@ header .navigation .list {
 }
 
 .skills .body {
-  margin-top: 25px;
-}
-
-.skills .image {
-  width: 180px;
-  height: 220px;
+  margin-top: 40px;
 }
 
 /*================================
@@ -347,8 +345,6 @@ header .navigation .list {
   outline: none;
   font-size: 36px;
 }
-
-
 
 /*================================
 	footer
@@ -524,16 +520,31 @@ footer .text {
   .contact .pcNone {
     display: none;
   }
+
+  .skills .icon {
+    gap: 60px;
+  }
 }
 
 @media not all and (min-width: 450px) {
-  .skills .icons {
+  .skills .iconArea {
     gap: 60px 30px;
   }
 
-  .skills .image {
-    width: 130px;
-    height: 160px;
+  .skills .icon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 130px);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .skills .box {
+    margin: 0 auto;
+    max-width: 130px;
+  }
+
+  .skills .body {
+    width: 100px;
   }
 
   .contact .text {
