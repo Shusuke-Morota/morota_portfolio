@@ -93,7 +93,17 @@ section {
 	button hover transition
 =================================*/
 
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 134px;
+}
+
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   outline: none;
 }
@@ -259,6 +269,16 @@ header .navigation .list {
   overflow: hidden;
 }
 
+.works .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
 /*================================
 	SKILLS section
 =================================*/
@@ -326,18 +346,8 @@ header .navigation .list {
   height: 100px;
 }
 
-.contact .buttonWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 134px;
-}
-
 .contact .button {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 226px;
   height: 75px;
   padding: 15px 20px;
