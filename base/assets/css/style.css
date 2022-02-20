@@ -289,7 +289,7 @@ header .navigation .list {
 
 .skills .tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
