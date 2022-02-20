@@ -289,7 +289,7 @@ header .navigation .list {
 
 .skills .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -297,12 +297,12 @@ header .navigation .list {
   padding: 15px;
 }
 
-.skills .tab.is-active {
-  border-bottom: 1px solid #333;
+.skills .iconWrapper {
+  display: none;
 }
 
-.skills .iconArea {
-  margin-top: 100px;
+.skills .is-active {
+  border-bottom: 1px solid #333;
 }
 
 .skills .icon {
@@ -310,7 +310,11 @@ header .navigation .list {
   grid-template-columns: repeat(auto-fit, 180px);
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  margin: 100px auto 0;
+}
+
+.skills .is-show {
+  display: block;
 }
 
 .skills .title {

@@ -51,24 +51,24 @@ $(function() {
   init();
 });
 
-// $(function() {
-//   const $tab = $(".tab");
-//   function activeTab($this) {
-//     $tab.removeClass("is-active");
-//     $this.addClass("is-active");
-//   }
+$(function () {
+  const $tab = $('.tab');
+  function activeTab($this) {
+    $tab.removeClass('is-active');
+    $this.addClass('is-active');
+  }
 
-//   function activeIcon(index) {
-//     const $icon = $(".icon");
-//     $icon.removeClass("is-show").eq(index).addClass("is-show");
-//   }
+  function activeIcon(index) {
+    const $icon = $('.iconWrapper');
+    $icon.removeClass('is-show').eq(index).addClass('is-show');
+  }
 
-//   function init() {
-//     const $this = $(this);
-//     const index = $this.index();
-//     activeTab();
-//     activeIcon();
-//   }
+  function init() {
+    const $this = $(this);
+    const index = $this.index();
+    activeTab($this);
+    activeIcon(index);
+  }
 
-//   $tab.on("click", init);
-// });
+  $tab.on('click', init);
+});
