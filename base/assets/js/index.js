@@ -39,16 +39,16 @@ $(function() {
     $this.addClass('is-active');
   }
 
-  function activeIcon(index) {
-    const $icon = $('.iconWrapper');
-    $icon.removeClass('is-show').eq(index).addClass('is-show');
+  function activePanel(index) {
+    const $panels = $('.panels');
+    $panels.removeClass('is-show').eq(index).addClass('is-show');
   }
 
   function changeTab() {
     const $this = $(this);
     const index = $this.index();
     activeTab($this);
-    activeIcon(index);
+    activePanel(index);
   }
 
   function setEvent() {

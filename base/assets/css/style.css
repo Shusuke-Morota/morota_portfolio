@@ -297,15 +297,15 @@ header .navigation .list {
   padding: 15px;
 }
 
-.skills .iconWrapper {
+.skills .panels {
   display: none;
 }
 
 .skills .is-active {
-  border-bottom: 1px solid #333;
+  background-color: #EDCDBB;
 }
 
-.skills .icon {
+.skills .panel {
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   justify-content: center;
@@ -315,6 +315,19 @@ header .navigation .list {
 
 .skills .is-show {
   display: block;
+  opacity: 1;
+  animation-name: panelAnimation;
+  animation-duration: 2.5s;
+}
+
+@keyframes panelAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .skills .title {
@@ -535,17 +548,13 @@ footer .text {
     display: none;
   }
 
-  .skills .icon {
+  .skills .panel {
     gap: 60px;
   }
 }
 
 @media not all and (min-width: 450px) {
-  .skills .iconArea {
-    gap: 60px 30px;
-  }
-
-  .skills .icon {
+  .skills .panel {
     display: grid;
     grid-template-columns: repeat(auto-fit, 130px);
     justify-content: center;
