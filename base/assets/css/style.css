@@ -38,13 +38,8 @@ section {
 }
 
 .container {
+  max-width: 1024px;
   margin: 0 auto;
-}
-
-@media only screen and (min-width: 1023px) {
-  .container {
-    width: 1024px;
-  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -172,12 +167,12 @@ header .navigation .list {
 	first view
 =================================*/
 
-.firstView .message {
+.topPage .firstView .message {
   text-align: center;
   font-size: 48px;
 }
 
-.firstView .heroWrapper {
+.topPage .firstView .heroWrapper {
   display: flex;
   margin-top: 44px;
 }
@@ -186,38 +181,38 @@ header .navigation .list {
 	ABOUT section
 =================================*/
 
-.about {
+.topPage .about {
   overflow: hidden;
   background-color: #F7F6F2;
 }
 
-.about .contentsWrapper {
+.topPage .about .contentsWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about .wrapper {
+.topPage .about .wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
   font-size: 16px;
 }
 
-.about .profile {
+.topPage .about .profile {
   line-height: 1.7;
 }
 
-.about .title {
+.topPage .about .title {
   font-weight: 700;
 }
 
-.about .icon {
+.topPage .about .icon {
   width: 300px;
   height: 300px;
 }
 
-.about .authorImage {
+.topPage .about .authorImage {
   display: block;
   border-radius: 9999px;
 }
@@ -226,32 +221,32 @@ header .navigation .list {
 	WORKS section
 =================================*/
 
-.works {
+.topPage .works {
   background-color: #EDCDBB;
 }
 
-.works .cards {
+.topPage .works .cards {
   column-gap: 30px;
 }
 
-.works .card {
+.topPage .works .card {
   box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
 }
 
-.works .thumbnail {
+.topPage .works .thumbnail {
   background-image: url(../img/Disney2_image.jpeg);
   background-position: center;
   background-size: cover;
   padding-top: 53%;
 }
 
-.works .detail {
+.topPage .works .detail {
   height: 175px;
   padding: 20px 15px;
   background-color: #F7F6F2;
 }
 
-.works .title {
+.topPage .works .title {
   word-break: break-all;
   font-weight: 700;
   overflow: hidden;
@@ -259,7 +254,7 @@ header .navigation .list {
   white-space: nowrap;
 }
 
-.works .body {
+.topPage .works .body {
   margin-top: 15px;
   line-height: 1.5;
   word-break: break-all;
@@ -269,7 +264,7 @@ header .navigation .list {
   overflow: hidden;
 }
 
-.works .button {
+.topPage .works .button {
   position: relative;
   width: 226px;
   height: 75px;
@@ -283,29 +278,29 @@ header .navigation .list {
 	SKILLS section
 =================================*/
 
-.skills {
+.topPage .skills {
   background-color: #F7F6F2;
 }
 
-.skills .tabs {
+.topPage .skills .tabs {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.skills .tab {
+.topPage .skills .tab {
   padding: 15px;
 }
 
-.skills .panels {
-  display: none;
-}
-
-.skills .is-active {
+.topPage .skills .is-active {
   background-color: #EDCDBB;
 }
 
-.skills .panel {
+.topPage .skills .panels {
+  display: none;
+}
+
+.topPage .skills .panel {
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   justify-content: center;
@@ -313,7 +308,7 @@ header .navigation .list {
   margin: 100px auto 0;
 }
 
-.skills .is-show {
+.topPage .skills .is-show {
   display: block;
   opacity: 1;
   animation-name: panelAnimation;
@@ -330,11 +325,11 @@ header .navigation .list {
   }
 }
 
-.skills .title {
+.topPage .skills .title {
   text-align: center;
 }
 
-.skills .body {
+.topPage .skills .body {
   margin-top: 40px;
 }
 
@@ -342,28 +337,118 @@ header .navigation .list {
 	CONTACT section
 =================================*/
 
-.contact {
+.topPage .contact {
   background-color: #EDCDBB;
 }
 
-.contact .text {
+.topPage .contact .text {
   text-align: center;
   font-size: 48px;
 }
 
-.contact .snsIcons {
+.topPage .contact .snsIcons {
   display: flex;
   justify-content: center;
   column-gap: 50px;
   margin-top: 30px;
 }
 
-.contact .snsIcon {
+.topPage .contact .snsIcon {
   width: 100px;
   height: 100px;
 }
 
-.contact .button {
+.topPage .contact .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	single page
+=================================*/
+
+.singlePage {
+  padding: 85px 0 125px;
+}
+
+.singlePage .thumbnail {
+  background-image: url(../img/Disney2_image.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.singlePage .cardBody {
+  display: flex;
+  justify-content: center;
+
+  margin: 45px auto 0;
+}
+
+.singlePage .articleContents {
+  width: 100%;
+  max-width: 680px;
+  padding: 20px;
+}
+
+.singlePage .articleTitle {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.singlePage .articleBody {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 18px;
+}
+
+.singlePage .time {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+}
+
+.singlePage .date {
+  font-size: 14px;
+}
+
+.singlePage .articleTags {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 25px;
+}
+
+.singlePage .title {
+  font-size: 30px;
+}
+
+.singlePage .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.singlePage .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singlePage .tagItem {
+  padding: 5px 20px;
+  background-color: #F0E5CF;
+  font-size: 18px;
+}
+
+.singlePage .button {
   position: relative;
   width: 226px;
   height: 75px;
@@ -412,12 +497,12 @@ footer .text {
     font-size: 20px;
   }
 
-  .works .cards {
+  .topPage .works .cards {
     display: flex;
     justify-content: center;
   }
 
-  .works .card {
+  .topPage .works .card {
     max-width: 300px;
   }
 }
@@ -426,6 +511,14 @@ footer .text {
   body.active {
     overflow: hidden;
   }
+
+  /* .topPage {
+    width: 96%;
+  }
+
+  .topPage main {
+    margin: 0 auto;
+  } */
 
   header .drawerToggle {
     position: fixed;
@@ -508,7 +601,7 @@ footer .text {
     max-width: 96%;
   }
 
-  .works .cards {
+  .topPage .works .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -517,64 +610,62 @@ footer .text {
 }
 
 @media only screen and (min-width: 768px) {
-  .about .icon {
+  .topPage .about .icon {
     margin-left: 100px;
   }
 
-  .skills .tabs {
+  .topPage .skills .tabs {
     column-gap: 35px;
   }
 
-  .skills .tab {
+  .topPage .skills .tab {
     font-size: 36px;
   }
 }
 
 @media not all and (min-width: 768px) {
-
-  .about .contentsWrapper {
-    display: flex;
+  .topPage .about .contentsWrapper {
     flex-direction: column;
     row-gap: 50px;
   }
 
-  .skills .tab {
+  .topPage .skills .tab {
     font-size: 24px;
   }
 }
 
 @media only screen and (min-width: 450px) {
-  .contact .pcNone {
-    display: none;
+  .topPage .skills .panel {
+    gap: 60px;
   }
 
-  .skills .panel {
-    gap: 60px;
+  .topPage .contact .pcNone {
+    display: none;
   }
 }
 
 @media not all and (min-width: 450px) {
-  .skills .panel {
+  .topPage .skills .panel {
     display: grid;
     grid-template-columns: repeat(auto-fit, 130px);
     justify-content: center;
     gap: 30px;
   }
 
-  .skills .box {
+  .topPage .skills .box {
     margin: 0 auto;
     max-width: 130px;
   }
 
-  .skills .body {
+  .topPage .skills .body {
     width: 100px;
   }
 
-  .contact .text {
+  .topPage .contact .text {
     font-size: 36px;
   }
 
-  .contact .pcNone {
+  .topPage .contact .pcNone {
     display: block;
   }
 }
