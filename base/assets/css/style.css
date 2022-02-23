@@ -24,9 +24,9 @@ a {
 input,
 textarea {
   margin-top: 10px;
+  padding: 5px;
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 2px solid #c4c4c4;
 }
 
 /*===================
@@ -38,7 +38,6 @@ section {
 }
 
 .container {
-  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -55,10 +54,6 @@ section {
 .heading {
   text-align: center;
   font-size: 48px;
-}
-
-.card {
-  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
 }
 
 /*================================
@@ -203,6 +198,10 @@ header .navigation .list {
 	first view
 =================================*/
 
+.topPage .firstView .container {
+  max-width: 1024px;
+}
+
 .topPage .firstView .message {
   text-align: center;
   font-size: 48px;
@@ -314,6 +313,10 @@ header .navigation .list {
   background-color: #F7F6F2;
 }
 
+.topPage .skills .container {
+  max-width: 1024px;
+}
+
 .topPage .skills .tabs {
   display: flex;
   justify-content: center;
@@ -406,6 +409,11 @@ header .navigation .list {
 
 .singlePage {
   padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.singlePage .container {
+  max-width: 1024px;
 }
 
 .singlePage .thumbnail {
@@ -485,14 +493,15 @@ header .navigation .list {
 
 .articlePage {
   padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.articlePage .container {
+  max-width: 1024px;
 }
 
 .articlePage .heading {
   font-weight: 700;
-}
-
-.articlePage .contentsWrapper {
-  margin-top: 96px;
 }
 
 .articlePage .cards {
@@ -504,6 +513,7 @@ header .navigation .list {
 
 .articlePage .card {
   width: 100%;
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -561,14 +571,15 @@ header .navigation .list {
 
 .tagsPage {
   padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.tagsPage .container {
+  max-width: 1024px;
 }
 
 .tagsPage .heading {
   font-weight: 700;
-}
-
-.tagsPage .contentsWrapper {
-  margin-top: 96px;
 }
 
 .tagsPage .cards {
@@ -580,6 +591,7 @@ header .navigation .list {
 
 .tagsPage .card {
   width: 100%;
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -629,6 +641,42 @@ header .navigation .list {
 
 .tagsPage .tagItem {
   font-size: 14px;
+}
+
+/*================================
+	contact-form page
+=================================*/
+
+.formPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.formPage .container {
+  max-width: 680px;
+}
+
+.formPage dt {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.formPage .required {
+  color: #cf2626;
+}
+
+.formPage textarea {
+  height: 300px;
+}
+
+.formPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
 }
 
 /*================================
