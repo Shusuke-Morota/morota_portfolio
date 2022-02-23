@@ -26,7 +26,7 @@ textarea {
   margin-top: 10px;
   padding: 5px;
   width: 100%;
-  border: 2px solid #c4c4c4;
+  border: 3px solid #EDCDBB;
 }
 
 /*===================
@@ -112,7 +112,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 134px;
+  margin-top: 100px;
 }
 
 .button {
@@ -656,8 +656,15 @@ header .navigation .list {
   max-width: 680px;
 }
 
-.formPage dt {
+.formPage .formWrapper {
+  margin-top: 50px;
+}
+
+.formPage dl + dl {
   margin-top: 25px;
+}
+
+.formPage dt {
   font-size: 20px;
 }
 
@@ -666,7 +673,7 @@ header .navigation .list {
 }
 
 .formPage textarea {
-  height: 300px;
+  height: 280px;
 }
 
 .formPage .button {
@@ -677,6 +684,64 @@ header .navigation .list {
   text-decoration: none;
   outline: none;
   font-size: 36px;
+}
+
+/*================================
+	contact-confirm page
+=================================*/
+
+.confirmPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.confirmPage .container {
+  max-width: 680px;
+}
+
+.confirmPage .confirmWrapper {
+  margin-top: 50px;
+}
+
+.confirmPage .row {
+  word-break: break-all;
+}
+
+.confirmPage .row + .row {
+  margin-top: 30px;
+}
+
+.confirmPage .title {
+  font-size: 20px;
+}
+
+.confirmPage .field {
+  margin-top: 15px;
+  padding: 20px;
+  border-bottom: 3px solid #EDCDBB;
+}
+
+.confirmPage .buttonWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confirmPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+.confirmPage .button.back:hover {
+  background-color: #dc3545;
+}
+
+.confirmPage .button.submit:hover {
+  background-color: #28a745;
 }
 
 /*================================
