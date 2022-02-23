@@ -57,8 +57,12 @@ section {
   font-size: 48px;
 }
 
+.card {
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+}
+
 /*================================
-	section fadeIn animation
+	top page section fadeIn animation
 =================================*/
 
 .fadeUp {
@@ -85,7 +89,28 @@ section {
 }
 
 /*================================
-	button hover transition
+	tag
+=================================*/
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagItem {
+  padding: 5px 20px;
+  background-color: #F0E5CF;
+}
+
+/*================================
+	[common item] btn hover transition
 =================================*/
 
 .buttonWrapper {
@@ -108,9 +133,9 @@ section {
   content: "";
   position: absolute;
   border: 1px solid #333;
-  width: 20px;
-  height: 20px;
-  transition:all 0.3s ease-in-out;
+  width: 10px;
+  height: 10px;
+  transition:all 0.8s ease-in-out;
 }
 
 .button::before {
@@ -127,9 +152,20 @@ section {
 
 .button:hover::before,
 .button:hover::after {
-  width:calc(100% - 2px);
-	height:calc(100% - 2px);
+  width:calc(100% + 10px);
+	height:calc(100% + 10px);
 	border-color: #666;
+}
+
+/*================================
+	[common item] pagination
+=================================*/
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin-top: 60px;
 }
 
 /*================================
@@ -227,10 +263,6 @@ header .navigation .list {
 
 .topPage .works .cards {
   column-gap: 30px;
-}
-
-.topPage .works .card {
-  box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
 }
 
 .topPage .works .thumbnail {
@@ -429,22 +461,11 @@ header .navigation .list {
 }
 
 .singlePage .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
   margin-top: 20px;
   padding: 20px;
 }
 
-.singlePage .tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .singlePage .tagItem {
-  padding: 5px 20px;
-  background-color: #F0E5CF;
   font-size: 18px;
 }
 
@@ -456,6 +477,82 @@ header .navigation .list {
   text-decoration: none;
   outline: none;
   font-size: 36px;
+}
+
+/*================================
+	article page
+=================================*/
+
+.articlePage {
+  padding: 85px 0 125px;
+}
+
+.articlePage .heading {
+  font-weight: 700;
+}
+
+.articlePage .contentsWrapper {
+  margin-top: 96px;
+}
+
+.articlePage .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.articlePage .card {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box
+}
+
+.articlePage .cards:after {
+  content: "";
+  display: block;
+  width: 29%;
+  height: 0;
+}
+
+.articlePage .thumbnail {
+  background-image: url(../img/Disney1_image.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.articlePage .cardBody {
+  padding: 15px;
+}
+
+.articlePage .articleTitle {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.articlePage .articleBody {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.articlePage .tags {
+  margin-top: 15px;
+}
+
+.articlePage .tagItem {
+  font-size: 14px;
 }
 
 /*================================
@@ -503,6 +600,10 @@ footer .text {
   }
 
   .topPage .works .card {
+    max-width: 300px;
+  }
+
+  .articlePage .card {
     max-width: 300px;
   }
 }
