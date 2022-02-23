@@ -556,6 +556,82 @@ header .navigation .list {
 }
 
 /*================================
+	tags page
+=================================*/
+
+.tagsPage {
+  padding: 85px 0 125px;
+}
+
+.tagsPage .heading {
+  font-weight: 700;
+}
+
+.tagsPage .contentsWrapper {
+  margin-top: 96px;
+}
+
+.tagsPage .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.tagsPage .card {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box
+}
+
+.tagsPage .cards:after {
+  content: "";
+  display: block;
+  width: 29%;
+  height: 0;
+}
+
+.tagsPage .thumbnail {
+  background-image: url(../img/Disney1_image.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.tagsPage .cardBody {
+  padding: 15px;
+}
+
+.tagsPage .articleTitle {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.tagsPage .articleBody {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.tagsPage .tags {
+  margin-top: 15px;
+}
+
+.tagsPage .tagItem {
+  font-size: 14px;
+}
+
+/*================================
 	footer
 =================================*/
 
@@ -604,6 +680,10 @@ footer .text {
   }
 
   .articlePage .card {
+    max-width: 300px;
+  }
+
+  .tagsPage .card {
     max-width: 300px;
   }
 }
