@@ -737,11 +737,50 @@ header .navigation .list {
 }
 
 .confirmPage .button.back:hover {
-  background-color: #dc3545;
+  background-color: #FFFF80;
 }
 
 .confirmPage .button.submit:hover {
-  background-color: #28a745;
+  background-color: #66FF66;
+}
+
+/*================================
+	thanks page
+=================================*/
+
+.thanksPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.thanksPage .container {
+  max-width: 680px;
+}
+
+.thanksPage .thanksWrapper {
+  margin-top: 50px;
+}
+.thanksPage .message {
+  text-align: center;
+  font-size: 28px;
+}
+
+.thanksPage .image {
+  margin-top: 40px;
+  background-image: url(../img/thanks.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.thanksPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
 }
 
 /*================================
