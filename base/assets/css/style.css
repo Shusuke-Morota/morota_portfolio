@@ -765,7 +765,7 @@ header .navigation .list {
 }
 .thanksPage .message {
   text-align: center;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .thanksPage .image {
@@ -1004,6 +1004,21 @@ footer .text {
     width: 96%;
     margin: 0 auto;
   }
+
+  .formPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .confirmPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .thanksPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 450px) {
@@ -1012,6 +1027,10 @@ footer .text {
   }
 
   .topPage .contact .pcNone {
+    display: none;
+  }
+
+  .thanksPage .text .pcNone {
     display: none;
   }
 }
@@ -1038,6 +1057,10 @@ footer .text {
   }
 
   .topPage .contact .pcNone {
+    display: block;
+  }
+
+  .thanksPage .text .pcNone {
     display: block;
   }
 }
