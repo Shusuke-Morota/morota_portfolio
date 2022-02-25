@@ -508,12 +508,13 @@ header .navigation .list {
 .articlePage .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
 }
 
 .articlePage .card {
   width: 100%;
+  max-width: 300px;
   box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -524,7 +525,7 @@ header .navigation .list {
 .articlePage .cards:after {
   content: "";
   display: block;
-  width: 29%;
+  width: 35%;
   height: 0;
 }
 
@@ -586,12 +587,13 @@ header .navigation .list {
 .tagsPage .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
 }
 
 .tagsPage .card {
   width: 100%;
+  max-width: 300px;
   box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -602,7 +604,7 @@ header .navigation .list {
 .tagsPage .cards:after {
   content: "";
   display: block;
-  width: 29%;
+  width: 33%;
   height: 0;
 }
 
@@ -832,9 +834,9 @@ footer .text {
     max-width: 300px;
   }
 
-  .articlePage .card {
+  /* .articlePage .card {
     max-width: 300px;
-  }
+  } */
 
   .tagsPage .card {
     max-width: 300px;
