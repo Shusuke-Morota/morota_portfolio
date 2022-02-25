@@ -264,6 +264,10 @@ header .navigation .list {
   column-gap: 30px;
 }
 
+.topPage .works .card {
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+}
+
 .topPage .works .thumbnail {
   background-image: url(../img/Disney2_image.jpeg);
   background-position: center;
@@ -424,9 +428,6 @@ header .navigation .list {
 }
 
 .singlePage .cardBody {
-  display: flex;
-  justify-content: center;
-
   margin: 45px auto 0;
 }
 
@@ -437,11 +438,13 @@ header .navigation .list {
 }
 
 .singlePage .articleTitle {
+  word-break: break-all;
   font-size: 30px;
   font-weight: 700;
 }
 
 .singlePage .articleBody {
+  word-break: break-all;
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #333;
@@ -460,8 +463,6 @@ header .navigation .list {
 
 .singlePage .articleTags {
   width: 100%;
-  max-width: 300px;
-  margin-left: 25px;
 }
 
 .singlePage .title {
@@ -805,7 +806,7 @@ footer .text {
 ===================*/
 
 /*================================
-	Desk top( 〜1024px )
+	Desk top( 1024px〜 )
 =================================*/
 
 @media only screen and (min-width: 1024px) {
@@ -840,18 +841,14 @@ footer .text {
   }
 }
 
+/*================================
+	Tablet( 〜 1023px )
+=================================*/
+
 @media only screen and (max-width: 1023px) {
   body.active {
     overflow: hidden;
   }
-
-  /* .topPage {
-    width: 96%;
-  }
-
-  .topPage main {
-    margin: 0 auto;
-  } */
 
   header .drawerToggle {
     position: fixed;
@@ -940,6 +937,11 @@ footer .text {
     justify-content: center;
     row-gap: 30px;
   }
+
+  .singlePage main {
+    width: 96%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -954,6 +956,16 @@ footer .text {
   .topPage .skills .tab {
     font-size: 36px;
   }
+
+  .singlePage .cardBody {
+    display: flex;
+    justify-content: center;
+  }
+
+  .singlePage .articleTags {
+    max-width: 300px;
+    margin-left: 25px;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -964,6 +976,21 @@ footer .text {
 
   .topPage .skills .tab {
     font-size: 24px;
+  }
+
+  .singlePage .cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .singlePage .articleTags {
+    max-width: 680px;
+    margin-top: 30px;
+  }
+
+  .singlePage .title {
+    text-align: center;
   }
 }
 
