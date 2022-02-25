@@ -51,6 +51,24 @@ $(function() {
     activePanel(index);
   }
 
+  function pageTopButton() {
+    const $pagetop = $('#js-pagetop');
+    $pagetop.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 500) {
+        $pagetop.fadeIn();
+      } else {
+        $pagetop.fadeOut();
+      }
+    });
+    $pagetop.click(function () {
+      $('body, html').animate({
+          scrollTop: 0
+      }, 500);
+      return false;
+    });
+  }
+
   function setEvent() {
     $drawerToggle.on("click", hamburgerMenu)
     $tab.on('click', changeTab);
@@ -65,6 +83,7 @@ $(function() {
   function init() {
     scrollEvent();
     setEvent();
+    pageTopButton();
   }
 
   init();
