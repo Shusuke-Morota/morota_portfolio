@@ -36,11 +36,17 @@ function sub_loop($number) {
   return $the_query;
 }
 
-function replace_page_title($current_tag) {
-  if (is_tag()) {
-    $current_tag = single_tag_title();
+function output_post_tags() {
+  $post_tags = get_the_tags();
+  $tags_count = 0;
+  if ($post_tags){
+    foreach($post_tags as $tag){
+      $tags_count++;
+      if ($tags_count <= 3){
+        echo '<li class="tag"><a href="' . get_tag_link($tag->term_id) . '" class="tagItem">' . $tag->name . '</a></li>';
+      }
+    }
   }
-  return $current_tag;
 }
 
 function hooks() {
