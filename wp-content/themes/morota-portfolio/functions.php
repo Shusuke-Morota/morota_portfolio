@@ -26,6 +26,23 @@ function read_assets() {
   );
 }
 
+function sub_loop($number) {
+  $args = array (
+    'posts_per_page' => $number,
+    'post_type' => 'post',
+    'paged' => get_query_var('paged')
+  );
+  $the_query = new WP_Query($args);
+  return $the_query;
+}
+
+function replace_page_title($current_tag) {
+  if (is_tag()) {
+    $current_tag = single_tag_title();
+  }
+  return $current_tag;
+}
+
 function hooks() {
   add_action('wp_enqueue_scripts', 'read_assets');
   add_theme_support('post-thumbnails');
