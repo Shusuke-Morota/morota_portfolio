@@ -338,6 +338,7 @@ header .navigation .list {
 }
 
 .topPage .skills .is-active {
+  transition-duration: 2.5s;
   background-color: #EDCDBB;
 }
 
