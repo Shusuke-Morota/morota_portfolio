@@ -297,7 +297,7 @@
       </div>
     </section>
     <div id="js-pagetop">
-      <span class="pagetopButton">TOP</span>
+      <span class="button">TOP</span>
     </div>
   </main>
 </div>

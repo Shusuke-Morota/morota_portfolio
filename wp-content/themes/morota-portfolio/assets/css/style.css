@@ -127,7 +127,7 @@ section {
 .button::after {
   content: "";
   position: absolute;
-  border: 1px solid #333;
+  border: 1px solid #4d4d4f;
   width: 10px;
   height: 10px;
   transition:all 0.8s ease-in-out;
@@ -424,25 +424,25 @@ header .navigation .list {
   right: 50px;
   width: 75px;
   height: 75px;
-  border: 1px solid #4d4d4f;
   cursor: pointer;
-}
-
-#js-pagetop .pagetopButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
 }
 
 #js-pagetop:hover {
   transition-duration: 1s;
   background-color: #4d4d4f;
   color: #fff;
+}
+
+#js-pagetop .button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 30px 25px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
 }
 
 /*================================
