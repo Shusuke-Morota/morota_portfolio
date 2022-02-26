@@ -423,7 +423,7 @@ header .navigation .list {
   right: 50px;
   width: 75px;
   height: 75px;
-  border: 1px solid #333;
+  border: 1px solid #4d4d4f;
   cursor: pointer;
 }
 
@@ -436,6 +436,12 @@ header .navigation .list {
   width: 100%;
   text-align: center;
   font-size: 14px;
+}
+
+#js-pagetop:hover {
+  transition-duration: 1s;
+  background-color: #4d4d4f;
+  color: #fff;
 }
 
 /*================================
