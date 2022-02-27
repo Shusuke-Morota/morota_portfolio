@@ -17,7 +17,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="aboutSection">
       <div class="container fadeUpTrigger">
         <h2 class="heading">ABOUT ME</h2>
         <div class="contentsWrapper">
@@ -52,7 +52,7 @@
         </div>
       </div>
     </section>
-    <section class="works">
+    <section class="works" id="worksSection">
       <div class="container fadeUpTrigger">
         <h2 class="heading">WORKS</h2>
         <div class="contentsWrapper">
@@ -90,12 +90,12 @@
             ?>
           </div>
           <div class="buttonWrapper">
-            <a href="#" class="button">Show More</a>
+            <a href="" class="button">Show More</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skillsSection">
       <div class="container fadeUpTrigger">
         <h2 class="heading">SKILLS</h2>
         <div class="contentsWrapper">
@@ -275,7 +275,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contactSection">
       <div class="container  fadeUpTrigger">
         <h2 class="heading">CONTACT</h2>
         <div class="contentsWrapper">
@@ -291,7 +291,7 @@
             </div>
           </div>
           <div class="buttonWrapper">
-            <a href="#" class="button">CONTACT</a>
+            <a href="" class="button">CONTACT</a>
           </div>
         </div>
       </div>

@@ -51,6 +51,18 @@ $(function() {
     activePanel(index);
   }
 
+  function pageInHeaderLink() {
+    $('a[href^="#"]').click(function() {
+      const $adjust = 100;
+      const $speed = 400;
+      const href = $(this).attr("href");
+      const $target = $(href == "#" || href == "" ? 'html' : href);
+      const $position = $target.offset().top - $adjust;
+      $('body,html').animate({scrollTop:$position}, $speed, 'swing');
+      return false;
+    });
+  }
+
   function pageTopButton() {
     const $pagetop = $('#js-pagetop');
     $pagetop.hide();
@@ -72,6 +84,7 @@ $(function() {
   function setEvent() {
     $drawerToggle.on("click", hamburgerMenu)
     $tab.on('click', changeTab);
+
   }
 
   function scrollEvent() {
@@ -84,6 +97,7 @@ $(function() {
     scrollEvent();
     setEvent();
     pageTopButton();
+    pageInHeaderLink();
   }
 
   init();

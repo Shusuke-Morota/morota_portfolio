@@ -24,10 +24,10 @@
       <nav class="navigation js-navigation">
         <ul class="list">
           <li class="item">HOME</li>
-          <li class="item">ABOUT</li>
-          <li class="item">WORKS</li>
-          <li class="item">SKILLS</li>
-          <li class="item">CONTACT</li>
+          <li class="item"><a href="#aboutSection">ABOUT</a></li>
+          <li class="item"><a href="#worksSection">WORKS</a></li>
+          <li class="item"><a href="#skillsSection">SKILLS</a></li>
+          <li class="item"><a href="#contactSection">CONTACT</a></li>
         </ul>
       </nav>
     </div>
