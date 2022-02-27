@@ -271,7 +271,6 @@ header .navigation .list {
 }
 
 .topPage .works .thumbnail {
-  /* background-image: url(../img/Disney2_image.jpeg); */
   background-position: center;
   background-size: cover;
   padding-top: 53%;
@@ -459,7 +458,6 @@ header .navigation .list {
 }
 
 .singlePage .thumbnail {
-  /* background-image: url(../img/Disney2_image.jpeg); */
   background-position: center;
   background-size: cover;
   padding-top: 53%;
@@ -567,7 +565,6 @@ header .navigation .list {
 }
 
 .articlePage .thumbnail {
-  /* background-image: url(../img/Disney1_image.jpeg); */
   background-position: center;
   background-size: cover;
   padding-top: 53%;
@@ -577,23 +574,24 @@ header .navigation .list {
   padding: 15px;
 }
 
-.articlePage .articleTitle {
+.articlePage .title {
+  margin-top: 8px;
   word-break: break-all;
+  font-weight: 700;
+  font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.8;
 }
 
-.articlePage .articleBody {
+.articlePage .body > p {
+  margin-top: 15px;
   word-break: break-all;
+  line-height: 1.6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
-  line-height: 1.8;
 }
 
 .articlePage .tags {
