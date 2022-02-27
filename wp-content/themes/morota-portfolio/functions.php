@@ -36,6 +36,13 @@ function sub_loop($number) {
   return $the_query;
 }
 
+function replace_page_title($current_tag) {
+  if (is_tag()) {
+    $current_tag = single_tag_title();
+  }
+  return $current_tag;
+}
+
 function output_post_tags() {
   $post_tags = get_the_tags();
   $tags_count = 0;
@@ -46,6 +53,13 @@ function output_post_tags() {
         echo '<li class="tag"><a href="' . get_tag_link($tag->term_id) . '" class="tagItem">' . $tag->name . '</a></li>';
       }
     }
+  }
+}
+
+function tag_page_output_tags() {
+  $post_tags = get_the_tags();
+  foreach($post_tags as $tag ) {
+    echo '<li class="tag"><a href="' . get_tag_link($tag->term_id) . '" class="tagItem">' . $tag->name . '</a></li>';
   }
 }
 

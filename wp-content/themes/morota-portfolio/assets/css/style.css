@@ -290,6 +290,10 @@ header .navigation .list {
   white-space: nowrap;
 }
 
+.topPage .works .body {
+  height: 70px;
+}
+
 .topPage .works .body > p {
   margin-top: 15px;
   line-height: 1.5;
@@ -584,6 +588,10 @@ header .navigation .list {
   white-space: nowrap;
 }
 
+.articlePage .body {
+  height: 70px;
+}
+
 .articlePage .body > p {
   margin-top: 15px;
   word-break: break-all;
@@ -628,7 +636,6 @@ header .navigation .list {
 
 .tagsPage .card {
   width: 100%;
-  /* max-width: 300px; */
   box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -644,7 +651,6 @@ header .navigation .list {
 }
 
 .tagsPage .thumbnail {
-  /* background-image: url(../img/Disney1_image.jpeg); */
   background-position: center;
   background-size: cover;
   padding-top: 53%;
@@ -654,23 +660,28 @@ header .navigation .list {
   padding: 15px;
 }
 
-.tagsPage .articleTitle {
+.tagsPage .title {
+  margin-top: 8px;
   word-break: break-all;
+  font-weight: 700;
+  font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.8;
 }
 
-.tagsPage .articleBody {
+.tagsPage .body {
+  height: 70px;
+}
+
+.tagsPage .body > p {
+  margin-top: 15px;
   word-break: break-all;
+  line-height: 1.6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
-  line-height: 1.8;
 }
 
 .tagsPage .tags {
