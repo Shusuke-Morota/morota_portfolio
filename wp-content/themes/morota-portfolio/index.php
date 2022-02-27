@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="topPage">
   <main>
-    <section class="firstView">
+    <section class="firstView" id="firstView">
       <div class="container">
         <h2 class="message">
           Welcome to<br>

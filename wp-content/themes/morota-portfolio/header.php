@@ -12,7 +12,7 @@
   <header>
     <div class="inner">
       <h1 class="logo">
-        <a href="#">
+        <a href="<?php echo home_url('/'); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="SHUSUKE MOROTA PORTFOLIO">
         </a>
       </h1>
@@ -23,11 +23,21 @@
       </button>
       <nav class="navigation js-navigation">
         <ul class="list">
-          <li class="item">HOME</li>
-          <li class="item"><a href="#aboutSection">ABOUT</a></li>
-          <li class="item"><a href="#worksSection">WORKS</a></li>
-          <li class="item"><a href="#skillsSection">SKILLS</a></li>
-          <li class="item"><a href="#contactSection">CONTACT</a></li>
+          <li class="item">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#firstView">HOME</a>
+          </li>
+          <li class="item">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#aboutSection">ABOUT</a>
+          </li>
+          <li class="item">
+            <a href="<?php echo home_url('/article/'); ?>">WORKS</a>
+          </li>
+          <li class="item">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#skillsSection">SKILLS</a>
+          </li>
+          <li class="item">
+            <a href="<?php echo home_url('/form/'); ?>">CONTACT</a>
+          </li>
         </ul>
       </nav>
     </div>
