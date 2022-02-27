@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="buttonWrapper">
-        <a href="#" class="button">Top Page</a>
+      <a href="<?php echo home_url('/'); ?>" class="button">Top Page</a>
       </div>
     </div>
   </main>
