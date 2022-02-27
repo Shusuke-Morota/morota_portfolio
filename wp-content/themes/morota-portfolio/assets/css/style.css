@@ -1,0 +1,1103 @@
+/*===================
+        base
+===================*/
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+textarea {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 3px solid #EDCDBB;
+}
+
+/*===================
+        global
+===================*/
+
+section {
+  padding: 85px 0 125px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    max-width: 96%;
+  }
+}
+
+.contentsWrapper {
+  margin-top: 96px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 48px;
+}
+
+/*================================
+	top page section fadeIn animation
+=================================*/
+
+.fadeUp {
+  animation-name: fadeUpAnimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+/*================================
+	tag
+=================================*/
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagItem {
+  padding: 5px 20px;
+  background-color: #F0E5CF;
+}
+
+/*================================
+	[common item] btn hover transition
+=================================*/
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #4d4d4f;
+  width: 10px;
+  height: 10px;
+  transition:all 0.8s ease-in-out;
+}
+
+.button::before {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.button::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1px 1px 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width:calc(100% + 10px);
+	height:calc(100% + 10px);
+	border-color: #666;
+}
+
+/*================================
+	[common item] pagination
+=================================*/
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin-top: 60px;
+}
+
+/*================================
+	header
+=================================*/
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #F0E5CF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  min-height: 100px;
+  margin: 0 auto;
+}
+
+header .logo {
+  width: 134px;
+  height: 67px;
+}
+
+header .navigation .list {
+  column-gap: 45px;
+}
+
+/*================================
+	first view
+=================================*/
+
+.topPage .firstView .container {
+  max-width: 1024px;
+}
+
+.topPage .firstView .message {
+  text-align: center;
+  font-size: 48px;
+}
+
+.topPage .firstView .heroWrapper {
+  display: flex;
+  margin-top: 44px;
+}
+
+/*================================
+	ABOUT section
+=================================*/
+
+.topPage .about {
+  overflow: hidden;
+  background-color: #F7F6F2;
+}
+
+.topPage .about .contentsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topPage .about .wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  font-size: 16px;
+}
+
+.topPage .about .profile {
+  line-height: 1.7;
+}
+
+.topPage .about .title {
+  font-weight: 700;
+}
+
+.topPage .about .icon {
+  width: 300px;
+  height: 300px;
+}
+
+.topPage .about .authorImage {
+  display: block;
+  border-radius: 9999px;
+}
+
+/*================================
+	WORKS section
+=================================*/
+
+.topPage .works {
+  background-color: #EDCDBB;
+}
+
+.topPage .works .cards {
+  column-gap: 30px;
+}
+
+.topPage .works .card {
+  width: 100%;
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+  background-color: #F7F6F2;
+}
+
+.topPage .works .thumbnail {
+  /* background-image: url(../img/Disney2_image.jpeg); */
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.topPage .works .feature {
+  padding: 20px 15px;
+}
+
+.topPage .works .title {
+  margin-top: 8px;
+  word-break: break-all;
+  font-weight: 700;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topPage .works .body > p {
+  margin-top: 15px;
+  line-height: 1.5;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.topPage .works .tags {
+  margin-top: 20px;
+}
+
+.topPage .works .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	SKILLS section
+=================================*/
+
+.topPage .skills {
+  background-color: #F7F6F2;
+}
+
+.topPage .skills .container {
+  max-width: 1024px;
+}
+
+.topPage .skills .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topPage .skills .tab {
+  padding: 15px;
+}
+
+.topPage .skills .is-active {
+  transition-duration: 2.5s;
+  background-color: #EDCDBB;
+}
+
+.topPage .skills .panels {
+  display: none;
+}
+
+.topPage .skills .panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 180px);
+  justify-content: center;
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+.topPage .skills .is-show {
+  display: block;
+  opacity: 1;
+  animation-name: panelAnimation;
+  animation-duration: 2.5s;
+}
+
+@keyframes panelAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.topPage .skills .title {
+  text-align: center;
+}
+
+.topPage .skills .body {
+  margin-top: 40px;
+}
+
+/*================================
+	CONTACT section
+=================================*/
+
+.topPage .contact {
+  background-color: #EDCDBB;
+}
+
+.topPage .contact .text {
+  text-align: center;
+  font-size: 48px;
+}
+
+.topPage .contact .snsIcons {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  margin-top: 30px;
+}
+
+.topPage .contact .snsIcon {
+  width: 100px;
+  height: 100px;
+}
+
+.topPage .contact .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	top button section
+=================================*/
+
+#js-pagetop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+#js-pagetop:hover {
+  transition-duration: 1s;
+  background-color: #4d4d4f;
+  color: #fff;
+}
+
+#js-pagetop .button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 30px 25px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+}
+
+/*================================
+	single page
+=================================*/
+
+.singlePage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.singlePage .container {
+  max-width: 1024px;
+}
+
+.singlePage .thumbnail {
+  /* background-image: url(../img/Disney2_image.jpeg); */
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.singlePage .cardBody {
+  margin: 45px auto 0;
+}
+
+.singlePage .articleContents {
+  width: 100%;
+  max-width: 680px;
+  padding: 20px;
+}
+
+.singlePage .articleTitle {
+  word-break: break-all;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.singlePage .articleBody {
+  word-break: break-all;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 18px;
+}
+
+.singlePage .time {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+}
+
+.singlePage .date {
+  font-size: 14px;
+}
+
+.singlePage .articleTags {
+  width: 100%;
+}
+
+.singlePage .title {
+  font-size: 30px;
+}
+
+.singlePage .tags {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.singlePage .tagItem {
+  font-size: 18px;
+}
+
+.singlePage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	article page
+=================================*/
+
+.articlePage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.articlePage .container {
+  max-width: 1024px;
+}
+
+.articlePage .heading {
+  font-weight: 700;
+}
+
+.articlePage .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.articlePage .card {
+  width: 100%;
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box
+}
+
+.articlePage .cards:after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 0;
+}
+
+.articlePage .thumbnail {
+  /* background-image: url(../img/Disney1_image.jpeg); */
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.articlePage .cardBody {
+  padding: 15px;
+}
+
+.articlePage .articleTitle {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.articlePage .articleBody {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.articlePage .tags {
+  margin-top: 15px;
+}
+
+.articlePage .tagItem {
+  font-size: 14px;
+}
+
+/*================================
+	tags page
+=================================*/
+
+.tagsPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.tagsPage .container {
+  max-width: 1024px;
+}
+
+.tagsPage .heading {
+  font-weight: 700;
+}
+
+.tagsPage .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tagsPage .card {
+  width: 100%;
+  /* max-width: 300px; */
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box
+}
+
+.tagsPage .cards:after {
+  content: "";
+  display: block;
+  width: 33%;
+  height: 0;
+}
+
+.tagsPage .thumbnail {
+  /* background-image: url(../img/Disney1_image.jpeg); */
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.tagsPage .cardBody {
+  padding: 15px;
+}
+
+.tagsPage .articleTitle {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.tagsPage .articleBody {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.tagsPage .tags {
+  margin-top: 15px;
+}
+
+.tagsPage .tagItem {
+  font-size: 14px;
+}
+
+/*================================
+	contact-form page
+=================================*/
+
+.formPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.formPage .container {
+  max-width: 680px;
+}
+
+.formPage .formWrapper {
+  margin-top: 50px;
+}
+
+.formPage dl + dl {
+  margin-top: 25px;
+}
+
+.formPage dt {
+  font-size: 20px;
+}
+
+.formPage .required {
+  color: #cf2626;
+}
+
+.formPage textarea {
+  height: 280px;
+}
+
+.formPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	contact-confirm page
+=================================*/
+
+.confirmPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.confirmPage .container {
+  max-width: 680px;
+}
+
+.confirmPage .confirmWrapper {
+  margin-top: 50px;
+}
+
+.confirmPage .row {
+  word-break: break-all;
+}
+
+.confirmPage .row + .row {
+  margin-top: 30px;
+}
+
+.confirmPage .title {
+  font-size: 20px;
+}
+
+.confirmPage .field {
+  margin-top: 15px;
+  padding: 20px;
+  border-bottom: 3px solid #EDCDBB;
+}
+
+.confirmPage .buttonWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confirmPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+.confirmPage .button.back:hover {
+  background-color: #FFFF80;
+}
+
+.confirmPage .button.submit:hover {
+  background-color: #66FF66;
+}
+
+/*================================
+	thanks page
+=================================*/
+
+.thanksPage {
+  padding: 85px 0 125px;
+  background-color: #F7F6F2;
+}
+
+.thanksPage .container {
+  max-width: 680px;
+}
+
+.thanksPage .thanksWrapper {
+  margin-top: 50px;
+}
+.thanksPage .message {
+  text-align: center;
+  font-size: 25px;
+}
+
+.thanksPage .image {
+  margin-top: 40px;
+  background-image: url(../img/thanks.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 53%;
+}
+
+.thanksPage .button {
+  position: relative;
+  width: 226px;
+  height: 75px;
+  padding: 15px 20px;
+  text-decoration: none;
+  outline: none;
+  font-size: 36px;
+}
+
+/*================================
+	footer
+=================================*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px 0;
+  background-color: #F0E5CF;
+}
+
+footer .text {
+  font-size: 24px;
+}
+
+/*===================
+      responsive
+===================*/
+
+/*================================
+	Desk top( 1024px〜 )
+=================================*/
+
+@media only screen and (min-width: 1024px) {
+  .drawerToggle {
+    display: none;
+  }
+
+  header .navigation .list {
+    display: flex;
+    column-gap: 45px;
+  }
+
+  header .navigation .item {
+    font-size: 20px;
+  }
+
+  .topPage .works .cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  .topPage .works .card {
+    max-width: 300px;
+  }
+}
+
+/*================================
+	Tablet( 〜 1023px )
+=================================*/
+
+@media only screen and (max-width: 1023px) {
+  body.active {
+    overflow: hidden;
+  }
+
+  header .drawerToggle {
+    position: fixed;
+    top: 16px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    z-index: 9999;
+  }
+
+  header .drawerToggle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background-color: #4d4d4f;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+
+  header .drawerToggle span:first-child {
+    transform: translate(-50%, -16px);
+  }
+
+  header .drawerToggle span:last-child {
+    transform: translate(-50%, 15px);
+  }
+
+  header .drawerToggle.active span:first-child {
+    transform: rotate(45deg) translate(-50%, 0);
+    transform-origin: 0% 50%;
+  }
+
+  header .drawerToggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .drawerToggle.active span:last-child {
+    transform: rotate(-45deg) translate(-50%, 0);
+    transform-origin: 0% 50%;
+  }
+
+/*================================
+	hamburger menu navigation
+=================================*/
+
+  header .navigation {
+    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.5s;
+  }
+
+  header .navigation.active {
+    right: 0;
+  }
+
+  header .navigation .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  header .navigation .item {
+    font-size: 30px;
+  }
+
+  header .inner {
+    max-width: 96%;
+  }
+
+  .topPage .works .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+  }
+
+  .singlePage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .topPage .about .icon {
+    margin-left: 100px;
+  }
+
+  .topPage .skills .tabs {
+    column-gap: 35px;
+  }
+
+  .topPage .skills .tab {
+    font-size: 36px;
+  }
+
+  .singlePage .cardBody {
+    display: flex;
+    justify-content: center;
+  }
+
+  .singlePage .articleTags {
+    max-width: 300px;
+    margin-left: 25px;
+  }
+
+  .articlePage .card {
+    max-width: 300px;
+  }
+
+  .tagsPage .card {
+    max-width: 300px;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .topPage .about .contentsWrapper {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .topPage .skills .tab {
+    font-size: 24px;
+  }
+
+  .singlePage .cardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .singlePage .articleTags {
+    max-width: 680px;
+    margin-top: 30px;
+  }
+
+  .singlePage .title {
+    text-align: center;
+  }
+
+  .articlePage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .tagsPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .formPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .confirmPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .thanksPage main {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .topPage .skills .panel {
+    gap: 60px;
+  }
+
+  .topPage .contact .pcNone {
+    display: none;
+  }
+
+  .thanksPage .text .pcNone {
+    display: none;
+  }
+}
+
+@media not all and (min-width: 450px) {
+  .topPage .skills .panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 130px);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .topPage .skills .box {
+    margin: 0 auto;
+    max-width: 130px;
+  }
+
+  .topPage .skills .body {
+    width: 100px;
+  }
+
+  .topPage .contact .text {
+    font-size: 36px;
+  }
+
+  .topPage .contact .pcNone {
+    display: block;
+  }
+
+  .thanksPage .text .pcNone {
+    display: block;
+  }
+}
