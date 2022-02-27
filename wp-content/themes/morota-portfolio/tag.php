@@ -14,6 +14,7 @@
             $noImage = get_template_directory_uri() . '/assets/img/no-image.png';
           ?>
           <div class="card">
+            <a href="<?php the_permalink(); ?>">
             <?php if($url) : ?>
               <div class="thumbnail" style="background-image: url('<?php echo $url; ?>');"></div>
             <?php else : ?>
@@ -25,8 +26,9 @@
                 <p class="title"><?php the_title(); ?></p>
                 <div class="body"><?php the_content(); ?></div>
               </div>
-              <ul class="tags"><?php no_upper_limit_output_tags(); ?></ul>
             </div>
+            </a>
+            <ul class="tags"><?php no_upper_limit_output_tags(); ?></ul>
           </div>
           <?php
             endwhile;

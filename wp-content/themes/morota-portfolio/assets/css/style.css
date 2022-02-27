@@ -488,7 +488,8 @@ header .navigation .list {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #333;
-  font-size: 18px;
+  line-height: 1.8;
+  font-size: 20px;
 }
 
 .singlePage .time {
@@ -498,7 +499,8 @@ header .navigation .list {
 }
 
 .singlePage .date {
-  font-size: 14px;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .singlePage .articleTags {
@@ -509,8 +511,14 @@ header .navigation .list {
   font-size: 30px;
 }
 
-.singlePage .tags {
+.singlePage .postDate {
   margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: right;
+}
+
+.singlePage .tags {
   padding: 20px;
 }
 
@@ -677,7 +685,7 @@ header .navigation .list {
 .tagsPage .body > p {
   margin-top: 15px;
   word-break: break-all;
-  line-height: 1.6;
+  line-height: 1.8;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -685,7 +693,7 @@ header .navigation .list {
 }
 
 .tagsPage .tags {
-  margin-top: 15px;
+  padding: 15px;
 }
 
 .tagsPage .tagItem {

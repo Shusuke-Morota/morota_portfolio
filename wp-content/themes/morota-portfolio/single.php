@@ -15,8 +15,10 @@
         <div class="cardBody">
           <div class="articleContents">
             <p class="articleTitle"><?php the_title(); ?></p>
-            <p class="articleBody"><?php the_content(); ?></p>
-            <time class="date"><?php the_time('Y.m.d'); ?></time>
+            <div class="articleBody"><?php the_content(); ?></div>
+            <div class="postDate">
+              <time class="date"><?php the_time('Y.m.d'); ?></time>
+            </div>
           </div>
           <div class="articleTags">
             <p class="title">Tags</p>
