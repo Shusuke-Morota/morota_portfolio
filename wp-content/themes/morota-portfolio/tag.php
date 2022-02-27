@@ -25,7 +25,7 @@
                 <p class="title"><?php the_title(); ?></p>
                 <div class="body"><?php the_content(); ?></div>
               </div>
-              <ul class="tags"><?php tag_page_output_tags(); ?></ul>
+              <ul class="tags"><?php no_upper_limit_output_tags(); ?></ul>
             </div>
           </div>
           <?php

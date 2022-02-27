@@ -79,7 +79,7 @@
                   <div class="body"><?php the_content(); ?></div>
                 </div>
                 <ul class="tags">
-                  <?php output_post_tags(); ?>
+                  <?php upper_limit_output_tags(); ?>
                 </ul>
               </div>
             </div>

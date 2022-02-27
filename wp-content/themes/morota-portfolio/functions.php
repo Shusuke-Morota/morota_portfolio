@@ -43,7 +43,7 @@ function replace_page_title($current_tag) {
   return $current_tag;
 }
 
-function output_post_tags() {
+function upper_limit_output_tags() {
   $post_tags = get_the_tags();
   $tags_count = 0;
   if ($post_tags){
@@ -56,7 +56,7 @@ function output_post_tags() {
   }
 }
 
-function tag_page_output_tags() {
+function no_upper_limit_output_tags() {
   $post_tags = get_the_tags();
   foreach($post_tags as $tag ) {
     echo '<li class="tag"><a href="' . get_tag_link($tag->term_id) . '" class="tagItem">' . $tag->name . '</a></li>';
