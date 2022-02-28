@@ -53,7 +53,7 @@ $(function() {
 
   function smoothScroll(target) {
     const $speed = 400;
-    const $position = $(target).offset().top;
+    const $position = target.offset().top;
     $('body,html').animate({scrollTop:$position}, $speed, 'swing');
   }
 

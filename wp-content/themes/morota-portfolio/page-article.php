@@ -6,15 +6,16 @@
       <div class="contentsWrapper">
         <div class="cards">
           <?php
-            $wp_query = sub_loop(12);
-            if ($wp_query->have_posts()):
-            while($wp_query->have_posts()): $wp_query->the_post();
+            $the_query = sub_loop(12);
+            if ($the_query->have_posts()):
+            while($the_query->have_posts()): $the_query->the_post();
           ?>
           <?php
             $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             $noImage = get_template_directory_uri() . '/assets/img/no-image.png';
           ?>
           <div class="card">
+            <a href="<?php the_permalink(); ?>">
             <?php if($url) : ?>
               <div class="thumbnail" style="background-image: url('<?php echo $url; ?>');"></div>
             <?php else : ?>
@@ -26,6 +27,7 @@
                 <p class="title"><?php the_title(); ?></p>
                 <div class="body"><?php the_content(); ?></div>
               </div>
+            </a>
               <ul class="tags"><?php upper_limit_output_tags(); ?></ul>
             </div>
           </div>
@@ -36,7 +38,7 @@
           ?>
         </div>
       </div>
-    <div class="paginationWrapper"></div>
+    <div class="paginationWrapper"><?php output_pagination($the_query); ?></div>
     </div>
   </main>
 </div>

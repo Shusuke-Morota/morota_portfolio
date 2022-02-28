@@ -159,8 +159,42 @@ section {
 .paginationWrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   column-gap: 10px;
   margin-top: 60px;
+}
+
+.paginationWrapper .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #EDCDBB;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+}
+
+.paginationWrapper .current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #EDCDBB;
+  color: #333;
+  font-size: 20px;
+}
+
+.paginationWrapper .prev {
+  background-color: #fff;
+  color: #333;
+}
+
+.paginationWrapper .next {
+  background-color: #fff;
+  color: #333;
 }
 
 /*================================
@@ -572,7 +606,7 @@ header .navigation .list {
 .articlePage .cards:after {
   content: "";
   display: block;
-  width: 35%;
+  width: 29%;
   height: 0;
 }
 
@@ -611,7 +645,10 @@ header .navigation .list {
 }
 
 .articlePage .tags {
+  min-height: 70px;
   margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #4d4d4f;
 }
 
 .articlePage .tagItem {
@@ -693,7 +730,10 @@ header .navigation .list {
 }
 
 .tagsPage .tags {
-  padding: 15px;
+  min-height: 70px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #4d4d4f;
 }
 
 .tagsPage .tagItem {

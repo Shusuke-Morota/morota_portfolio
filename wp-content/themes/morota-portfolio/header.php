@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHUSUKE_MOROTA_PORTFOLIO</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3a4e43d077.js" crossorigin="anonymous"></script>
   <?php wp_head(); ?>
 </head>
 <body>
@@ -30,7 +31,7 @@
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#aboutSection">ABOUT</a>
           </li>
           <li class="item">
-            <a href="<?php echo home_url('/article/'); ?>">WORKS</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#worksSection">WORKS</a>
           </li>
           <li class="item">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>#skillsSection">SKILLS</a>

@@ -63,6 +63,49 @@ function no_upper_limit_output_tags() {
   }
 }
 
+function output_pagination($the_query) {
+  $big = 9999999999;
+  $args = array(
+    'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+    'current' => max(1, get_query_var('paged')),
+    'total' => $the_query->max_num_pages,
+    'prev_text' => '<i class="fas fa-chevron-left"></i>',
+    'next_text' => '<i class="fas fa-chevron-right"></i>',
+    'type' => 'array'
+  );
+  $article_paginate_links = paginate_links($args);
+
+  $current = $args['current'];
+  $allowed = [
+    '/ current/u',
+    '/prev /u',
+    '/next /u',
+    sprintf( '/\/page\/%d(\/|")/u', $current-2 ),
+    sprintf( '/\/page\/%d(\/|")/u', $current-1 ),
+    sprintf( '/\/page\/%d(\/|")/u', $current+1 ),
+    sprintf( '/\/page\/%d(\/|")/u', $current+2 ),
+  ];
+
+  if(!empty($article_paginate_links)) {
+    $article_paginate_links = array_filter(
+        $article_paginate_links,
+        function($value) use ($allowed) {
+            foreach((array)$allowed as $tag) {
+                if(preg_match($tag, $value))
+                    return true;
+            }
+            return false;
+        }
+    );
+  }
+
+  if(!empty($article_paginate_links)) {
+    foreach($article_paginate_links as $paginate_link) {
+      echo $paginate_link;
+    }
+  }
+}
+
 function hooks() {
   add_action('wp_enqueue_scripts', 'read_assets');
   add_theme_support('post-thumbnails');
