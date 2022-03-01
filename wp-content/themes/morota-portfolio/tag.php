@@ -36,7 +36,7 @@
           ?>
         </div>
       </div>
-    <div class="paginationWrapper"></div>
+    <div class="paginationWrapper"><?php output_pagination($wp_query); ?></div>
     </div>
   </main>
 </div>
