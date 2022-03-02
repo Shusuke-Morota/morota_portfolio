@@ -631,17 +631,17 @@ header .navigation .list {
 }
 
 .articlePage .body {
-  height: 70px;
-}
-
-.articlePage .body > p {
-  margin-top: 15px;
+  min-height: 70px;
   word-break: break-all;
   line-height: 1.6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.articlePage .body > p {
+  margin-top: 15px;
 }
 
 .articlePage .tags {
@@ -716,17 +716,17 @@ header .navigation .list {
 }
 
 .tagsPage .body {
-  height: 70px;
-}
-
-.tagsPage .body > p {
-  margin-top: 15px;
+  min-height: 70px;
   word-break: break-all;
   line-height: 1.8;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.tagsPage .body > p {
+  margin-top: 15px;
 }
 
 .tagsPage .tags {
