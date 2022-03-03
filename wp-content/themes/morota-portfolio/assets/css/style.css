@@ -310,8 +310,8 @@ header .navigation .list {
   padding-top: 56%;
 }
 
-.topPage .works .feature {
-  padding: 20px 15px;
+.topPage .works .cardBody {
+  padding: 15px;
 }
 
 .topPage .works .title {
@@ -326,12 +326,9 @@ header .navigation .list {
 
 .topPage .works .body {
   height: 70px;
-}
-
-.topPage .works .body > p {
   margin-top: 15px;
-  line-height: 1.5;
   word-break: break-all;
+  line-height: 1.8;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -339,7 +336,10 @@ header .navigation .list {
 }
 
 .topPage .works .tags {
-  padding: 20px;
+  min-height: 70px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #4d4d4f;
 }
 
 .topPage .works .button {
@@ -526,6 +526,11 @@ header .navigation .list {
   font-size: 20px;
 }
 
+.singlePage .articleBody > h2 {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
 .singlePage .time {
   margin-top: 20px;
   padding-top: 30px;
@@ -631,17 +636,14 @@ header .navigation .list {
 }
 
 .articlePage .body {
-  min-height: 70px;
+  height: 70px;
+  margin-top: 15px;
   word-break: break-all;
   line-height: 1.6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}
-
-.articlePage .body > p {
-  margin-top: 15px;
 }
 
 .articlePage .tags {
@@ -717,16 +719,13 @@ header .navigation .list {
 
 .tagsPage .body {
   min-height: 70px;
+  margin-top: 15px;
   word-break: break-all;
   line-height: 1.8;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}
-
-.tagsPage .body > p {
-  margin-top: 15px;
 }
 
 .tagsPage .tags {

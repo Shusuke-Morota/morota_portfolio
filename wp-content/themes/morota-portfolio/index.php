@@ -68,22 +68,20 @@
             ?>
             <div class="card">
               <a href="<?php the_permalink(); ?>">
-                <?php if($url) : ?>
-                  <div class="thumbnail" style="background-image: url('<?php echo $url; ?>');"></div>
-                <?php else : ?>
-                  <div class="thumbnail" style="background-image: url('<?php echo $noImage; ?>')";></div>
-                <?php endif; ?>
-                <div class="feature">
-                  <div class="detail">
-                    <time class="date"><?php the_time('Y.m.d'); ?></time>
-                    <p class="title"><?php the_title(); ?></p>
-                    <div class="body"><?php the_content(); ?></div>
-                  </div>
+              <?php if($url) : ?>
+                <div class="thumbnail" style="background-image: url('<?php echo $url; ?>');"></div>
+              <?php else : ?>
+                <div class="thumbnail" style="background-image: url('<?php echo $noImage; ?>')";></div>
+              <?php endif; ?>
+              <div class="cardBody">
+                <div class="detail">
+                  <time class="date"><?php the_time('Y.m.d'); ?></time>
+                  <p class="title"><?php the_title(); ?></p>
+                  <div class="body"><?php the_content(); ?></div>
                 </div>
               </a>
-              <ul class="tags">
-                <?php upper_limit_output_tags(); ?>
-              </ul>
+                <ul class="tags"><?php upper_limit_output_tags(); ?></ul>
+              </div>
             </div>
             <?php
               endwhile;
