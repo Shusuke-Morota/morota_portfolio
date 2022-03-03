@@ -36,6 +36,9 @@
           ?>
         </div>
       </div>
+      <ul class="tagCloud">
+        <?php tag_cloud(); ?>
+      </ul>
     <div class="paginationWrapper"><?php output_pagination($wp_query); ?></div>
     </div>
   </main>
