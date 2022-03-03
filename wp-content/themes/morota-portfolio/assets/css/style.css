@@ -659,13 +659,17 @@ header .navigation .list {
 
 .articlePage .tagCloud {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   max-width: 670px;
   margin: 45px auto 0;
   padding: 30px;
   background-color: #EDCDBB;
+  box-shadow: 5px 10px 20px rgb(0 0 0 / 25%);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box
 }
 
 /*================================
