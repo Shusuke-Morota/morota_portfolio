@@ -38,8 +38,11 @@
           ?>
         </div>
       </div>
-    <div class="paginationWrapper"><?php output_pagination($the_query); ?></div>
-    </div>
+      <ul class="tagCloud">
+        <?php tag_cloud(); ?>
+      </ul>
+      <div class="paginationWrapper"><?php output_pagination($the_query); ?></div>
+      </div>
   </main>
 </div>
 <?php get_footer(); ?>

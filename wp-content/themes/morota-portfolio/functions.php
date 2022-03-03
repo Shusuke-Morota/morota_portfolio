@@ -63,6 +63,18 @@ function no_upper_limit_output_tags() {
   }
 }
 
+function tag_cloud() {
+  $all_tags = array(
+    'orderby' => 'count',
+    'order' => 'desc',
+    'number' => 0
+  );
+  $tags = get_terms('post_tag', $all_tags);
+  foreach($tags as $tag) {
+    echo '<li class="tag"><a href="'. get_tag_link($tag->term_id) .'" class="tagItem">'. $tag->name .'</a></li>';
+  }
+}
+
 function output_pagination($the_query) {
   $big = 9999999999;
   $args = array(
