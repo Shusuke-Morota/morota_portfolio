@@ -51,17 +51,24 @@ $(function() {
     activePanel(index);
   }
 
-  function pageInHeaderLink() {
-    $('a[href^="#"]').click(function() {
-      const $adjust = 100;
-      const $speed = 400;
-      const href = $(this).attr("href");
-      const $target = $(href == "#" || href == "" ? 'html' : href);
-      const $position = $target.offset().top - $adjust;
-      $('body,html').animate({scrollTop:$position}, $speed, 'swing');
-      return false;
-    });
+  function smoothScroll(target) {
+    const $speed = 400;
+    const $position = target.offset().top;
+    $('body,html').animate({scrollTop:$position}, $speed, 'swing');
   }
+
+  $('a[href^="#"]').click(function() {
+    const href = $(this).attr("href");
+    const target = (href == "#" || href == "") ? "html" : href;
+
+    smoothScroll(target);
+    return false;
+  });
+
+  $(window).on("load", function() {
+    const target = location.hash;
+    smoothScroll(target);
+  });
 
   function pageTopButton() {
     const $pagetop = $('#js-pagetop');
@@ -97,7 +104,7 @@ $(function() {
     scrollEvent();
     setEvent();
     pageTopButton();
-    pageInHeaderLink();
+    // smoothScroll();
   }
 
   init();

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="topPage">
   <main>
-    <section class="firstView">
+    <section class="firstView" id="firstView">
       <div class="container">
         <h2 class="message">
           Welcome to<br>
@@ -41,7 +41,7 @@
 
                 【特技】<br>
                 ・アカペラサークルで培ったボイスパーカッション<br>
-                ・信頼と実績のあるハイクオリティモノマネ<br>
+                ・信頼と実績のハイクオリティモノマネ<br>
                 ・肉体に宿した魔石を激烈な痛みと引き換えに世に送り出す秘技
               </p>
             </div>
@@ -67,20 +67,20 @@
               $noImage = get_template_directory_uri() . '/assets/img/no-image.png';
             ?>
             <div class="card">
+              <a href="<?php the_permalink(); ?>">
               <?php if($url) : ?>
                 <div class="thumbnail" style="background-image: url('<?php echo $url; ?>');"></div>
               <?php else : ?>
                 <div class="thumbnail" style="background-image: url('<?php echo $noImage; ?>')";></div>
               <?php endif; ?>
-              <div class="feature">
+              <div class="cardBody">
                 <div class="detail">
                   <time class="date"><?php the_time('Y.m.d'); ?></time>
                   <p class="title"><?php the_title(); ?></p>
                   <div class="body"><?php the_content(); ?></div>
                 </div>
-                <ul class="tags">
-                  <?php output_post_tags(); ?>
-                </ul>
+              </a>
+                <ul class="tags"><?php upper_limit_output_tags(); ?></ul>
               </div>
             </div>
             <?php
@@ -90,7 +90,7 @@
             ?>
           </div>
           <div class="buttonWrapper">
-            <a href="" class="button">Show More</a>
+            <a href="<?php echo home_url('/article/'); ?>" class="button">Show More</a>
           </div>
         </div>
       </div>
