@@ -23,23 +23,7 @@
         <span></span>
       </button>
       <nav class="navigation js-navigation">
-        <ul class="list">
-          <li class="item">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#firstView">HOME</a>
-          </li>
-          <li class="item">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#aboutSection">ABOUT</a>
-          </li>
-          <li class="item">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#worksSection">WORKS</a>
-          </li>
-          <li class="item">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>#skillsSection">SKILLS</a>
-          </li>
-          <li class="item">
-            <a href="<?php echo home_url('/form/'); ?>">CONTACT</a>
-          </li>
-        </ul>
+        <?php output_header_links(); ?>
       </nav>
     </div>
   </header>

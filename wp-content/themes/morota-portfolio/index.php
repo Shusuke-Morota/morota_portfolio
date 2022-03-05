@@ -291,7 +291,7 @@
             </div>
           </div>
           <div class="buttonWrapper">
-            <a href="" class="button">CONTACT</a>
+            <a href="<?php echo home_url('/contact/'); ?>" class="button">CONTACT</a>
           </div>
         </div>
       </div>

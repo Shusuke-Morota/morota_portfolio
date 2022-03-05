@@ -23,7 +23,7 @@ a {
 
 input,
 textarea {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 5px;
   width: 100%;
   border: 3px solid #EDCDBB;
@@ -783,6 +783,10 @@ header .navigation .list {
   font-size: 20px;
 }
 
+.formPage dd {
+  margin-top: 15px;
+}
+
 .formPage .required {
   color: #cf2626;
 }
@@ -818,27 +822,21 @@ header .navigation .list {
   margin-top: 50px;
 }
 
-.confirmPage .row {
-  word-break: break-all;
+.confirmPage dl + dl {
+  margin-top: 25px;
 }
 
-.confirmPage .row + .row {
-  margin-top: 30px;
-}
-
-.confirmPage .title {
+.confirmPage dt {
   font-size: 20px;
 }
 
-.confirmPage .field {
-  margin-top: 15px;
-  padding: 20px;
+.confirmPage dd {
   border-bottom: 3px solid #EDCDBB;
+  margin-top: 15px;
 }
 
-.confirmPage .buttonWrapper {
-  display: flex;
-  justify-content: space-evenly;
+.confirmPage .required {
+  color: #cf2626;
 }
 
 .confirmPage .button {
@@ -849,6 +847,11 @@ header .navigation .list {
   text-decoration: none;
   outline: none;
   font-size: 36px;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  -ms-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .confirmPage .button.back:hover {
@@ -875,6 +878,7 @@ header .navigation .list {
 .thanksPage .thanksWrapper {
   margin-top: 50px;
 }
+
 .thanksPage .message {
   text-align: center;
   font-size: 25px;
