@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cigarette.png" alt="諸田秀祐の画像" class="authorImage">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/morota.JPG" alt="諸田秀祐の画像" class="authorImage">
           </div>
         </div>
       </div>
