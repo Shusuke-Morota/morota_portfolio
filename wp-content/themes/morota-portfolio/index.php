@@ -284,10 +284,14 @@
           </p>
           <div class="snsIcons">
             <div class="twitter">
+            <a href="https://twitter.com/shururirara" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png" alt="twitterのアイコン" class="snsIcon">
+            </a>
             </div>
             <div class="instagram">
+            <a href="http://Instagram.com/SHUSUKE_MOROTA" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="instagramのアイコン" class="snsIcon">
+            </a>
             </div>
           </div>
           <div class="buttonWrapper">

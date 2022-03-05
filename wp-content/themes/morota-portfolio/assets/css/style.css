@@ -245,6 +245,7 @@ header .logo {
 
 header .navigation .list {
   column-gap: 45px;
+  font-size: 22px;
 }
 
 /*================================
@@ -934,7 +935,6 @@ footer .text {
 
   header .navigation .list {
     display: flex;
-    column-gap: 45px;
   }
 
   header .navigation .item {
