@@ -36,7 +36,6 @@
                 【略歴】<br>
                 大学卒業後、食品系の会社に就職し営業と配送を経験。<br>
                 友人の勧めやwebの革新性に触れ、異業種転職を決意。<br>
-                現在はフロントエンドエンジニアとして活動中。<br>
                 <br>
 
                 【特技】<br>
@@ -47,7 +46,7 @@
             </div>
           </div>
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cigarette.png" alt="諸田秀祐の画像" class="authorImage">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/morota.JPG" alt="諸田秀祐の画像" class="authorImage">
           </div>
         </div>
       </div>
@@ -284,14 +283,18 @@
           </p>
           <div class="snsIcons">
             <div class="twitter">
+            <a href="https://twitter.com/shururirara" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.png" alt="twitterのアイコン" class="snsIcon">
+            </a>
             </div>
             <div class="instagram">
+            <a href="http://Instagram.com/SHUSUKE_MOROTA" target="_blank" rel="noopener noreferrer">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.png" alt="instagramのアイコン" class="snsIcon">
+            </a>
             </div>
           </div>
           <div class="buttonWrapper">
-            <a href="" class="button">CONTACT</a>
+            <a href="<?php echo home_url('/contact/'); ?>" class="button">CONTACT</a>
           </div>
         </div>
       </div>
